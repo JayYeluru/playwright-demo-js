@@ -1,0 +1,38 @@
+{
+  "name": "playwright-demo-js",
+  "version": "1.0.0",
+  "description": "Playwright demo with java script",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep @smoke --project=Chrome",
+    "test:chrome": "npx playwright test --project=Chrome",
+    "allure:clean": "rm -rf allure-results",
+    "allure-generate": "allure generate ./allure-results --clean",
+    "allure:report": "npm run allure-generate && allure serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://JayakrishnaYeluru@github.com/JayakrishnaYeluru/playwright-demo-js.git"
+  },
+  "keywords": [
+    "Plawright",
+    "JavaScript"
+  ],
+  "author": "Jay Yeluru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayakrishnaYeluru/playwright-demo-js/issues"
+  },
+  "homepage": "https://github.com/JayakrishnaYeluru/playwright-demo-js#readme",
+
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "playwright": "^1.24.2",
+    "prettier": "^2.6.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.24.2",
+    "allure-playwright": "^2.0.0-beta.16"
+  }
+}
