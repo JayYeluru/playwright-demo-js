@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "show-report": "npx playwright show-report",
     "test:smoke": "npx playwright test --grep @smoke --project=Chrome",
     "test:chrome": "npx playwright test --project=Chrome",
     "allure:clean": "rm -rf allure-results",
@@ -16,7 +17,7 @@
     "url": "git+https://JayakrishnaYeluru@github.com/JayakrishnaYeluru/playwright-demo-js.git"
   },
   "keywords": [
-    "Plawright",
+    "Playwright",
     "JavaScript"
   ],
   "author": "Jay Yeluru",
@@ -25,11 +26,11 @@
     "url": "https://github.com/JayakrishnaYeluru/playwright-demo-js/issues"
   },
   "homepage": "https://github.com/JayakrishnaYeluru/playwright-demo-js#readme",
-
   "dependencies": {
     "fs": "^0.0.1-security",
     "playwright": "^1.24.2",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "allure-playwright": "^2.0.0-beta.16"
   },
   "devDependencies": {
     "@playwright/test": "^1.24.2",
