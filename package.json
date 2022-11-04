@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npx playwright test",
     "show-report": "npx playwright show-report",
-    "test:smoke": "npx playwright test --grep @smoke --project=Chrome",
-    "test:chrome": "npx playwright test --project=Chrome",
+    "test:smoke": "npx playwright test --grep @smoke --project=chrome",
+    "test:chrome": "npx playwright test --project=chrome",
     "allure:clean": "rm -rf allure-results",
     "allure-generate": "allure generate ./allure-results --clean",
     "allure:report": "npm run allure-generate && allure serve"
