@@ -37,6 +37,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.27.1",
-    "allure-playwright": "^2.0.0-beta.16"
+    "allure-playwright": "^2.0.0-beta.16",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1"
   }
 }
