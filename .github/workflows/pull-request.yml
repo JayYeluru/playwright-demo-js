@@ -19,7 +19,8 @@ jobs:
 
       # Install your dependencies
       - run: npm ci
-
+      - run: npm test
+      
       # Run ESLint using latest action
       - uses: eslint/github-action@draft
         env:
