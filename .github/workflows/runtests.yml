@@ -33,4 +33,5 @@ jobs:
 
       # Install your dependencies
       - run: npm i
+      - run: npx playwright install --with-deps
       - run: npm run test:${{ env.BROWSER }}
