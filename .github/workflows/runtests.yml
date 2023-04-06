@@ -32,7 +32,6 @@ jobs:
           node-version: 18
 
       # Install your dependencies
-
       - run: npm ci
       - run: npx playwright install
       - run: npm run test:${{ env.BROWSER }}
