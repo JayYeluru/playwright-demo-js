@@ -1,0 +1,37 @@
+name: Run Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      browser:
+        type: choice
+        description: 'Browser:'
+        default: chrome
+        required: true
+        options:
+          - chrome
+          - firfox
+          - safari
+          - edge
+
+jobs:
+  build:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    env:
+      BROWSER: ${{ github.event.inputs.browser }}
+
+    steps:
+      
+      # Check out the repository
+      - uses: actions/checkout@v1
+
+      # Install Node.js
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+
+      # Install your dependencies
+      - run: npm ci
+      - run: |
+        npm run test:${{ env.BROWSER }}
