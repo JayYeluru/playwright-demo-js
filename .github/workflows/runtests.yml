@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    name: Run Tests
+    name: Run Tests in - ${{ github.event.inputs.browser }}
     runs-on: macos-latest
     env:
       BROWSER: ${{ github.event.inputs.browser }}
@@ -32,7 +32,6 @@ jobs:
           node-version: 18
 
       # Install your dependencies
-
-      - run: npm i
+      - run: npm ci
       - run: npx playwright install
       - run: npm run test:${{ env.BROWSER }}
