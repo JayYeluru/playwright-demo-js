@@ -4,4 +4,8 @@
     "rules": {
       "prettier/prettier": ["error"]
     },
+    "env": {
+      "node": true,
+      "es5": true
+    }
   }
