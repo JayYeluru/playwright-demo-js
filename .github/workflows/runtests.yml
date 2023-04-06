@@ -17,20 +17,22 @@ on:
 jobs:
   build:
     name: Run Tests
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     env:
       BROWSER: ${{ github.event.inputs.browser }}
 
     steps:
       
       # Check out the repository
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
 
       # Install Node.js
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
 
       # Install your dependencies
-      - run: npm ci
+
+      - run: npm i
+      - run: npx playwright install
       - run: npm run test:${{ env.BROWSER }}
