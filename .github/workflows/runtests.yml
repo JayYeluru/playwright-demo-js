@@ -33,5 +33,4 @@ jobs:
 
       # Install your dependencies
       - run: npm ci
-      - run: |
-        npm run test:${{ env.BROWSER }}
+      - run: npm run test:${{ env.BROWSER }}
