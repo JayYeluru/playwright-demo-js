@@ -24,14 +24,14 @@ jobs:
     steps:
       
       # Check out the repository
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
 
       # Install Node.js
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
 
       # Install your dependencies
       - run: npm i
-      - run: npx playwright install --with-deps
+      - run: npx playwright install
       - run: npm run test:${{ env.BROWSER }}
