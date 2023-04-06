@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    name: Run ESLint
+    name: Run Tests
     runs-on: ubuntu-latest
     steps:
       
@@ -19,9 +19,4 @@ jobs:
 
       # Install your dependencies
       - run: npm ci
-      - run: npm test
-      
-      # Run ESLint using latest action
-      - uses: eslint/github-action@draft
-        env:
-          ESLINT_DRAFT: 1
+      - run: npm run test
