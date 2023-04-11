@@ -44,13 +44,13 @@ jobs:
             playwright-report
   publish_report:
     name: Publish to GH Pages
-      if: "success() || needs.test.result == 'failure'"
-      needs: [test]
-      runs-on: ubuntu-latest
-      continue-on-error: true
-      env:
-        HTML_REPORT_URL_PATH: reports/${{ github.ref_name }}/${{ github.run_id }}/${{ github.run_attempt }}
-      steps:
+    if: "success() || needs.test.result == 'failure'"
+    needs: [test]
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    env:
+      HTML_REPORT_URL_PATH: reports/${{ github.ref_name }}/${{ github.run_id }}/${{ github.run_attempt }}
+    steps:
       - name: Checkout GitHub Pages Branch
         uses: actions/checkout@v2
         with:
