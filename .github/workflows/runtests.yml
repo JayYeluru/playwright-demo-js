@@ -39,9 +39,9 @@ jobs:
         uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: Test Results - ${{ env.BROWSER }}
-          path: |
-            playwright-report
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
   publish_report:
     name: Publish to GH Pages
     if: "success() || needs.test.result == 'failure'"
